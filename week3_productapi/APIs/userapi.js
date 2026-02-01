@@ -1,5 +1,5 @@
 import exp from 'express'
-import { UserModel } from '../../model/usermodel.js'
+import { UserModel } from '../model/usermodel.js'
 export const userApp = exp.Router()
 
 // user API routes

@@ -1,10 +1,10 @@
 import exp from 'express';
-import { ProductModel } from '../model/productmodel.js';
-export const productApp = exp.Router()
+import { ProductModel } from '../model/ProductModel.js';
+export const productRoute= exp.Router()
 
 
 // Create product
-productApp.post('/products', async (req, res) => {
+productRoute.post('/products', async (req, res) => {
     // get new product from req body 
     let newProduct = req.body;
     // create new doc 
@@ -16,7 +16,7 @@ productApp.post('/products', async (req, res) => {
 })
 
 // Read all products
-productApp.get('/products', async (req, res) => {
+productRoute.get('/products', async (req, res) => {
     // read products from DB
     let products = await ProductModel.find();
     // send res
@@ -24,7 +24,7 @@ productApp.get('/products', async (req, res) => {
 })
 
 // Read product by object id
-productApp.get("/products/:id", async (req, res) => {
+productRoute.get("/products/:id", async (req, res) => {
     // get objectid from url
     let objId = req.params.id;
     // find product in db
@@ -34,7 +34,7 @@ productApp.get("/products/:id", async (req, res) => {
 })
 
 // Update product
-productApp.put("/products/:id", async (req, res) => {
+productRoute.put("/products/:id", async (req, res) => {
     // get objectID from url params
     let objId = req.params.id;
     // get modified product from req body
@@ -50,11 +50,11 @@ productApp.put("/products/:id", async (req, res) => {
 })
 
 // Delete product
-productApp.delete("/products/:id", async (req, res) => {
+productRoute.delete("/products/:id", async (req, res) => {
     // get objectID from url
     let objId = req.params.id;
     // delete product by id
-    await ProductModel.findByIdAndDelete(objId); // Fixed spelling from ProductsModel
+    await ProductModel.findByIdAndDelete(objId); 
     // send res
     res.status(200).json({ message: "product deleted" });
 })

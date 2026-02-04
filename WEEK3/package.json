@@ -1,26 +1,11 @@
 {
-  "name": "suntek-js",
+  "name": "new",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Spurthi-reddy/Suntek-Js.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "bugs": {
-    "url": "https://github.com/Spurthi-reddy/Suntek-Js/issues"
-  },
-  "homepage": "https://github.com/Spurthi-reddy/Suntek-Js#readme",
+  "type": "module", 
   "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "bcryptjs": "^3.0.3",
     "express": "^5.2.1",
-    "mongoose": "^9.1.5",
-    "nodemon": "^3.1.11"
+    "mongoose": "^9.1.5"
   }
 }

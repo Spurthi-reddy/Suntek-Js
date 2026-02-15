@@ -1,0 +1,73 @@
+##read all users
+GET http://localhost:4000/user-api/users
+###read user by object id
+GET http://localhost:4000/user-api/users/697dc7c59a2c9f90c977a9da
+###create user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"bhanu",
+    "password":"wer",
+    "age":22
+    
+}
+### UPDATE USER
+PUT http://localhost:4000/user-api/users/697dc7c59a2c9f90c977a9da
+Content-Type: application/json
+
+{
+    "username":"bai",
+    "password":"werwe",
+    "age":21 
+
+}
+
+###delete user
+DELETE http://localhost:4000/user-api/users/697dc7c59a2c9f90c977a9da
+
+### Create product
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "id": "PROD1234567",
+    "ProductName": "Gaming Laptop",
+    "price": 22000
+}
+
+### Read all products
+GET http://localhost:4000/product-api/products
+
+### 1. Create product (Run this first!)
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "id": "PROD9876543210",
+    "ProductName": "Gaming Laptop",
+    "price": 22000
+}
+
+### 2. Update product (REPLACE THE ID BELOW with the one from the POST response)
+PUT http://localhost:4000/product-api/products/PASTE_THE_ID_HERE
+Content-Type: application/json
+
+{
+    "ProductName": "Updated Gaming Laptop",
+    "price": 24500
+}
+
+### User authentication(Login) req
+
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "username":"bhanu",
+    "password":"wer"
+}
+
+###req for protected route
+
+GET http://localhost:4000/user-api/test

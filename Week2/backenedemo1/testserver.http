@@ -1,4 +1,23 @@
-GET http://127.0.0.1:4000/users
+GET http://localhost:4000/user-api/users
 
 ###
-POST http://127.0.0.1:4000/users
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+  "id":100,
+  "name":"spurthi",
+  "age":20
+}
+
+###
+PUT http://localhost:4000/user-api/users/100
+Content-Type: application/json
+
+{
+    "id":100,
+  "name":"spurthi",
+  "age":20
+}
+###
+DELETE http://localhost:4000/user-api/users/100
